@@ -139,9 +139,8 @@ img {
   font-family: var(--secondary-font);
   color: #000000;
   margin-right: 93px;
-  animation-duration: 2000ms;
-  animation-timing-function: linear;
 }
+
 .logo-web {
   color: var(--accent-color);
 }
