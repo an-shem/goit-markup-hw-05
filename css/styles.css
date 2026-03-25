@@ -413,14 +413,20 @@ img {
   border: 1px solid #fff;
   border-radius: 4px;
   background-color: #2e2f42;
+  color: #fff;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
-  color: #fff;
   outline: none;
   transition: var(--transition-effect);
   transition-property: border;
+}
+.subscribe-input:-webkit-autofill,
+.subscribe-input:-webkit-autofill:hover,
+.subscribe-input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #2e2f42 inset !important;
+  -webkit-text-fill-color: #fff !important;
 }
 .subscribe-input::placeholder {
   font-size: 12px;
@@ -430,6 +436,15 @@ img {
 }
 .subscribe-input:hover,
 .subscribe-input:focus {
+  border: 1px solid #31d0aa;
+}
+
+.subscribe-input:not(:placeholder-shown):invalid,
+.subscribe-comment:not(:placeholder-shown):invalid {
+  border: 1px solid #ed1568;
+}
+.subscribe-input:not(:placeholder-shown):valid,
+.subscribe-comment:not(:placeholder-shown):valid {
   border: 1px solid #31d0aa;
 }
 
@@ -565,10 +580,19 @@ img {
   padding: 8px 16px 8px 38px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+  background-color: #fcfcfc;
+  color: #2e2f42;
   outline: none;
   transition: var(--transition-effect);
   transition-property: border;
 }
+.form-input:-webkit-autofill,
+.form-input:-webkit-autofill:hover,
+.form-input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #fcfcfc inset !important;
+  -webkit-text-fill-color: #2e2f42 !important;
+}
+
 .form-input:hover,
 .form-input:focus,
 .form-comment:hover,
@@ -579,6 +603,25 @@ img {
 .form-input:focus + .form-input-icon {
   fill: #4d5ae5;
 }
+.form-input:not(:placeholder-shown):invalid,
+.form-comment:not(:placeholder-shown):invalid {
+  border: 1px solid #ed1568;
+  /* background-color: #fff; */
+}
+.form-input:not(:placeholder-shown):invalid + .form-input-icon,
+.form-comment:not(:placeholder-shown):invalid + .form-input-icon {
+  fill: #ed1568;
+}
+
+.form-input:not(:placeholder-shown):valid,
+.form-comment:not(:placeholder-shown):valid {
+  border: 1px solid #31d0aa;
+}
+.form-input:not(:placeholder-shown):valid + .form-input-icon,
+.form-comment:not(:placeholder-shown):valid + .form-input-icon {
+  fill: #31d0aa;
+}
+
 .form-input-icon {
   position: absolute;
   top: 50%;
