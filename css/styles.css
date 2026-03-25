@@ -667,6 +667,7 @@ img {
   display: flex;
   align-items: baseline;
   gap: 8px;
+  margin-bottom: 0;
 }
 .custom-checkbox {
   display: inline-flex;
@@ -686,7 +687,7 @@ img {
   fill: #f4f4fd;
 }
 .policy-link {
-  color: #404bbf;
+  color: #4d5ae5;
   text-decoration: underline;
 }
 /* #endregion */
