@@ -571,14 +571,13 @@ img {
 }
 .form-label {
   display: block;
+  margin-bottom: 4px;
   color: #8e8f99;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
 }
-.form-label {
-  margin-bottom: 4px;
-}
+
 .form-input {
   width: 100%;
   height: 40px;
@@ -669,7 +668,7 @@ img {
   gap: 8px;
   margin-bottom: 0;
 }
-.custom-checkbox {
+.form-custom-checkbox {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -681,7 +680,7 @@ img {
   transition: var(--transition-effect);
   transition-property: background-color, border, fill;
 }
-.checkbox-input:checked + .checkbox-label > .custom-checkbox {
+.checkbox-input:checked + .checkbox-label > .form-custom-checkbox {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
