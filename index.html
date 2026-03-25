@@ -401,12 +401,12 @@
       <div class="subscribe-wrapper">
         <p class="footer-subscribe-title">Subscribe</p>
         <form class="subscribe-form">
-          <label>
-            <input type="email" class="subscribe-input" placeholder="E-mail" required />
+          <label class="subscribe-label">
+            <input type="email" class="subscribe-input" name="subscribe" placeholder="E-mail" required />
           </label>
           <button class="subscribe-btn" type="submit">
             Subscribe
-            <svg class="subscribe-icon" width="24" height="20">
+            <svg class="subscribe-icon" width="24" height="24">
               <use href="./images/icons.svg#send"></use>
             </svg>
           </button>
@@ -416,13 +416,13 @@
   </footer>
   <div class="backdrop" data-modal>
     <div class="modal">
+      <p class="form-title">Leave your contacts and we will call you back</p>
       <button class="modal-close" type="button" data-modal-close>
         <svg class="form-close-btn-icon" width="8" height="8">
           <use href="./images/icons.svg#close"></use>
         </svg>
       </button>
       <form class="feedback-form" name="feedback-form">
-        <p class="form-title">Leave your contacts and we will call you back</p>
         <div class="form-item">
           <label class="form-label" for="user-name">Name</label>
           <div class="input-wrapper">
