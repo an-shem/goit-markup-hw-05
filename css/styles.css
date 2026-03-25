@@ -418,7 +418,7 @@ img {
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
-  outline: none;
+  outline: transparent;
   transition: var(--transition-effect);
   transition-property: border;
 }
@@ -459,7 +459,7 @@ img {
   border: none;
   color: #fff;
   background-color: #4d5ae5;
-  outline: none;
+  outline: transparent;
   cursor: pointer;
   font-weight: 500;
   line-height: 1.5;
@@ -570,7 +570,7 @@ img {
   position: relative;
 }
 .form-label {
-  display: inline-block;
+  display: block;
   color: #8e8f99;
   font-size: 12px;
   line-height: 1.17;
@@ -587,9 +587,9 @@ img {
   border-radius: 4px;
   background-color: transparent;
   color: #2e2f42;
-  outline: none;
+  outline: transparent;
   transition: var(--transition-effect);
-  transition-property: border;
+  transition-property: border-color;
 }
 .form-input:-webkit-autofill,
 .form-input:-webkit-autofill:hover,
@@ -602,7 +602,7 @@ img {
 .form-input:focus,
 .form-comment:hover,
 .form-comment:focus {
-  border: 1px solid #4d5ae5;
+  border-color: #4d5ae5;
 }
 .form-input:hover + .form-input-icon,
 .form-input:focus + .form-input-icon {
@@ -640,13 +640,19 @@ img {
 .form-comment {
   display: block;
   width: 100%;
+  height: 120px;
   padding: 8px 16px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   resize: none;
-  outline: none;
+  outline: transparent;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #2e2f4266;
+  background-color: transparent;
   transition: var(--transition-effect);
-  transition-property: border;
+  transition-property: border-color;
 }
 .form-comment::placeholder {
   font-size: 12px;
@@ -654,34 +660,30 @@ img {
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
 }
-
+.checkbox-wrapper {
+  margin-bottom: 24px;
+}
 .form-label.checkbox-label {
   display: flex;
   align-items: baseline;
   gap: 8px;
-  margin-bottom: 24px;
 }
 .custom-checkbox {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 16px;
   height: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  transition: var(--transition-effect);
-  transition-property: background-color;
-}
-#privacy-policy:checked + .custom-checkbox {
-  background-color: #404bbf;
-}
-.form-checkbox-icon {
   fill: transparent;
   transition: var(--transition-effect);
-  transition-property: fill;
+  transition-property: background-color, border, fill;
 }
-#privacy-policy:checked + .custom-checkbox > .form-checkbox-icon {
-  fill: #fff;
+.checkbox-input:checked + .checkbox-label > .custom-checkbox {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
 }
 .policy-link {
   color: #404bbf;
